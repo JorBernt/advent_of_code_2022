@@ -1,4 +1,4 @@
-package com.jb.priv.DayThree;
+package com.jb.priv.Day3;
 
 import com.jb.priv.InputReader;
 
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PartTwo {
     public static void main(String[] args) {
-        var input = InputReader.getInput("src/com/jb/priv/DayThree/input.txt");
+        var input = InputReader.getInput("src/com/jb/priv/Day3/input.txt");
         int count = 1;
         List<Character> badges = new ArrayList<>();
         for (int i = 0; i < input.size(); i += 3) {

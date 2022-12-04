@@ -1,4 +1,4 @@
-package com.jb.priv.DayThree;
+package com.jb.priv.Day3;
 
 import com.jb.priv.InputReader;
 
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PartOne {
     public static void main(String[] args) {
-        var input = InputReader.getInput("src/com/jb/priv/DayThree/input.txt");
+        var input = InputReader.getInput("src/com/jb/priv/Day3/input.txt");
         List<Character> items = new ArrayList<>();
         outer:
         for (var s : input) {

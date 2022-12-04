@@ -1,4 +1,4 @@
-package com.jb.priv.DayOne;
+package com.jb.priv.Day1;
 
 import com.jb.priv.InputReader;
 
@@ -7,7 +7,7 @@ import java.util.*;
 public class PartTwo {
 
     public static void main(String[] args) {
-        List<String> input = InputReader.getInput("src/com/jb/priv/DayOne/input.txt");
+        List<String> input = InputReader.getInput("src/com/jb/priv/Day1/input.txt");
         List<Integer> elves = new ArrayList<>();
         int sum = 0;
         for (String s : input) {

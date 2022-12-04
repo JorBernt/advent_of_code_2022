@@ -1,4 +1,4 @@
-package com.jb.priv.DayTwo;
+package com.jb.priv.Day2;
 
 import com.jb.priv.InputReader;
 
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PartTwo {
     public static void main(String[] args) {
-        List<String> input = InputReader.getInput("src/com/jb/priv/DayTwo/input.txt");
+        List<String> input = InputReader.getInput("src/com/jb/priv/Day2/input.txt");
         int sum = 0;
         for(String s : input) {
             var parts = s.split(" ");
