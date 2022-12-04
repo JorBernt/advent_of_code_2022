@@ -1,4 +1,4 @@
-package com.jb.priv.DayTwo;
+package com.jb.priv.Day2;
 import com.jb.priv.InputReader;
 
 import java.util.List;
