@@ -20,7 +20,6 @@ public class PartTwo {
         }
         elves.add(sum);
         elves.sort(Comparator.reverseOrder());
-        int[] a = new int[2];
         System.out.println(elves.stream().limit(3).mapToInt(n -> n).sum());
     }
 }
