@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class PartOne {
+    static List<Range> ranges = new ArrayList<>();
+
     public static void main(String[] args) {
         var input = InputReader.getInput("src/com/jb/priv/Day15/input.txt");
         List<Point> sensors = new ArrayList<>();
@@ -15,11 +17,35 @@ public class PartOne {
             var parts = s.split(": ");
             Point sensor = getPoint(parts[0]);
             Point beacon = getPoint(parts[1]);
+            int x = beacon.x() - sensor.x();
+            addRange(beacon.x(), (Math.abs(x) + 1) * 2 + 1, beacon.y());
             sensors.add(sensor);
             beacons.add(beacon);
         }
+        int sum = 0;
+        for (var r : ranges) {
+            sum += Math.abs(r.end - r.start);
+        }
+        System.out.println(sum);
     }
 
+    static void addRange(int start, int end, int h) {
+        h -= 10;
+        h /= 2;
+        start -= h;
+        end -= h;
+        for (var r : ranges) {
+            if (r.start < start && end < r.end) {
+                r.start = start;
+                return;
+            }
+            if (r.start > start && end > r.end) {
+                r.end = end;
+                return;
+            }
+        }
+        ranges.add(new Range(start, end));
+    }
 
     static Point getPoint(String input) {
         var parts = input.split(", ");
@@ -40,6 +66,15 @@ public class PartOne {
         @Override
         public int hashCode() {
             return Objects.hash(x, y);
+        }
+    }
+
+    static class Range {
+        int start, end;
+
+        public Range(int start, int end) {
+            this.start = start;
+            this.end = end;
         }
     }
 }
